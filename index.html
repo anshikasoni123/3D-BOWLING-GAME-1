@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"> </script>
+    <script src = "./throw.js"></script>
+</head>
+<body>
+    <a-scene id = "scene">
+
+        <a-assets>
+            <a-assets-item id = "pin" src = "./models/bowling_pin/scene.gltf"></a-assets-item>
+            <a-assets-item id = "ball" src = "./models/bowling_ball/scene.gltf"></a-assets-item>
+        </a-assets>
+
+        <a-entity id = "camera" camera position = "0 1.3 0" wasd-controls look-controls="pointerLockEnabled:false">
+            <a-cursor></a-cursor>
+        </a-entity>
+        <a-plane
+        id="ground"
+        repeat="5 5"
+        position="0 1 0"
+        rotation="-90 0 0"
+        height="30"
+        width="10"
+        color="pink"
+        static-body
+        visible="true"
+      >
+      </a-plane>
+      <a-entity bowling-balls></a-entity>
+
+      <a-cylinder id = "piller1" rotation = "-90 0 0" position = "-4 0.5 -0.5" height="30" radius = "1" color = "red"></a-cylinder>
+      <a-cylinder id = "piller2" rotation = "-90 0 0" position = "4 0.5 -0.5" height="30" radius = "1" color = "red"></a-cylinder>
+      <a-entity id = "bowling-ball" gltf-model = "#ball" position = "0 1.2 -0.2" scale = "0.3 0.3 0.3"></a-entity>
+      <a-entity id = "bowling-pin" gltf-model = "#pin" position = "0 1 -2.5"></a-entity>
+      <a-entity id = "bowling-pin2" gltf-model = "#pin" position = "-0.3 1 -2.7"></a-entity>
+      <a-entity id = "bowling-pin3" gltf-model = "#pin" position = "-0.6 1 -2.9"></a-entity>
+      <a-entity id = "bowling-pin4" gltf-model = "#pin" position = "-0.9 1 -3.1"></a-entity>
+      <a-entity id = "bowling-pin5" gltf-model = "#pin" position = "0.3 1 -2.7"></a-entity>
+      <a-entity id = "bowling-pin6" gltf-model = "#pin" position = "0.6 1 -2.9"></a-entity>
+      <a-entity id = "bowling-pin7" gltf-model = "#pin" position = "0.9 1 -3.1"></a-entity>
+      <a-entity id = "bowling-pin8" gltf-model = "#pin" position = "-0.15 1 -3"></a-entity>
+      <a-entity id = "bowling-pin9" gltf-model = "#pin" position = "0.15 1 -3"></a-entity>
+
+    </a-scene>
+</body>
+</html>
